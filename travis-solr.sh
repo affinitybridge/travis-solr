@@ -38,6 +38,10 @@ post_some_documents() {
 
 download_and_run() {
     case $1 in
+        1.4.1)
+            url="http://archive.apache.org/dist/lucene/solr/1.4.1/apache-solr-1.4.1.tgz"
+            dir_name="apache-solr-1.4.1"
+            ;;
         3.5.0)
             url="http://archive.apache.org/dist/lucene/solr/3.5.0/apache-solr-3.5.0.tgz"
             dir_name="apache-solr-3.5.0"
@@ -88,7 +92,7 @@ download_and_run() {
 
 check_version() {
     case $1 in
-        3.5.0|3.6.0|3.6.1|3.6.2|4.0.0);;
+        1.4.1|3.5.0|3.6.0|3.6.1|3.6.2|4.0.0);;
         *)
             echo "Sorry, $1 is not supported or not valid version."
             exit 1
